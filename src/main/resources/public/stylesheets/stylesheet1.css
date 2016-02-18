@@ -1,0 +1,76 @@
+
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,100);
+  body { padding: 70px 0px 0px 65px; font-family: 'Raleway', sans-serif;
+  font-weight: 100; font-size: 22px;
+  background: #420d20  url(../stylesheets/images/background/images10.jpg ) no-repeat 0px 0px; }
+
+  #header {
+    background-color:;
+    color:gold;
+    text-align:center;
+    padding:5px;
+
+
+}
+
+#nav {
+  color: gold;
+  background-color:;
+  height:300px;
+  width:100px;
+  float:left;
+  padding:5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+  a.btn {
+    display: inline-block;
+    border: 1px solid rgba(255,255,255,.5);
+    padding: 5px 20px 5px 10px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    margin: 0px 0px 10px 0px;
+    color: #fff;
+    width: 300px;
+    transition-property: background-color;
+    transition-duration: 1s;
+    transition-delay:0.5s, border-color: 0.5s;
+    padding: .5s;
+    width: .5s;
+    position:relative;
+    overflow: hidden;
+    line-height: 26px;
+  }
+  a.btn:hover { margin: 10px; width: 200px; background-color: rgba(0,0,0,.4);
+    border-color: #fff; padding-left: 20px; border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px; letter-spacing:2px; font-size: 1.1em;
+text-shadow: 0px 3px 2px #fcba68;}
+    a.btn::after{
+      content:'';
+      display:block;
+      width:10px;height: 100px;
+      background-color: #fcba68;
+      position: absolute; top: 0px; left: -10px;
+      transition: left .5s;
+    }
+
+    a.btn:hover::after{left: 0px;}
+
+    #section {
+    width:800px;
+    height: 500px;
+    float:right;
+    padding:10px;
+    color: gold;
+    font-weight: bold;
+    }
+
+    #footer {
+    font-size: 20px;
+    font-weight: bold;
+    color:black;
+    clear:both;
+    text-align:center;
+    padding:5px;
+}

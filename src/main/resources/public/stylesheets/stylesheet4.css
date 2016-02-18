@@ -1,0 +1,35 @@
+body { padding: 70px 0px 0px 65px; font-family: 'Rale', sans-serif;
+font-weight: 100; font-size: 22px;
+background: #420d20 url(../stylesheets/images/background/images3.jpg )
+no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover; }
+
+
+
+h1 {font-size:35px }
+section {
+  position: relative;
+  float: right;
+  margin: 0 1.5%;
+  width: 100%;
+}
+
+h2 {font-size: 20px}
+
+p {
+  display: inline-block;
+  font-size: 15px;
+  font-family: 'Rale';
+  color: blue;
+}
+
+footer {font-size: 15px;
+  font-family: 'Times New Roman';
+  text-align:center;
+}
+
+form {font-size: 15px;
+  width:}

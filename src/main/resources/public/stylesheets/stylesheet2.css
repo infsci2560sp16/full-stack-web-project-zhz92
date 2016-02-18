@@ -1,0 +1,46 @@
+
+
+body {
+  background: #420d20 url(../stylesheets/images/background/images13.jpg );
+  no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+  #header {
+    background-color:;
+    color:black;
+    text-align:left;
+    padding:5px;
+  }
+
+
+
+  p {
+    display: inline-block;
+    font-size: 15px;
+    font-family: 'Rale';
+  }
+
+  #section {
+  width:600px;
+  height:400x;
+  float:left;
+  padding:10px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  }
+
+
+  #footer {
+  font-size: 15px;
+  font-family: 'Times New Roman';
+  font-weight: ;
+  color:black;
+  clear:both;
+  text-align:center;
+  padding:5px;
+}
