@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Game Orders</title>
+<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet6.css ">
+<script></script>
+</head>
+<body>
+  <h1>Game Order Viewer</h1>
+
+  <h2>View your order here</h2>
+  <ul id="orders">
+    <li>Name: John, Game: Punisher</li>
+    <li>Name: Smith, Game: Heros</li>
+  </ul>
+
+
+
+  <h4>Add a Game Order</h4>
+  <p>User name: <input type="text" id="username"></p>
+  <p>Game name: <input type="text" id="gamename"></p>
+  <button id="add-order" onclick="sendText()">Add!</button>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="js6.js"></script>
+
+  <script>
+
+   $(function(){
+        $("#add-order").click(function(){
+
+        var username = $("#username").val();
+        var gamename = $("#gamename").val();
+
+        var send = JSON.stringify({"username":username,"gamename":gamename});
+
+        $("ul").append('<li>name: '+ username +', game: '+ gamename + '</li>');
+              $.ajax({
+                  contentType:'application/json',
+                  url: 'http://localhost:8080/RestService1.4/UserService',
+                  type: "POST",
+                  datatype: "json",
+                  data: send,
+                  success: function(send) {
+
+                  }
+              });
+                    return false;
+          });
+   });
+  </script>
+
+</body>
+</html>

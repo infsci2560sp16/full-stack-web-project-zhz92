@@ -18,3 +18,9 @@ function myFunction1() {
         var result = str.link( "http://www.tgbus.com");
         document.getElementById("link3").innerHTML = result;
       }
+
+      function loadDoc() {
+          var str = "View Collections";
+          var result = str.link( "./FirstPage.html");
+          document.getElementById("link4").innerHTML = result;
+        }

@@ -1,5 +1,16 @@
 <!DOCTYPE html>
 <html>
+<style>
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 5px;
+}
+
+
+</style>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>SearchPage</title>
@@ -26,6 +37,45 @@
 
   <section>
     <h2>Links for you to get more video games! Click the buttons below!</h2>
+    <button type="button" onclick="loadDoc()">Get my game collection</button>
+    <p id="link4"></p>
+
+    <table id="demo"></table>
+
+    <script>
+    function loadDoc() {
+
+
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+          myFunction(xhttp);
+        }
+      };
+      xhttp.open("GET", "http://localhost:8080/RestService1.4/GamebyDavid.xml", true);
+      xhttp.send();
+    }
+    function myFunction(xml) {
+      var i;
+      var xmlDoc = xml.responseXML;
+      var table="<tr><th>Description</th><th>Manufacturer</th><th>Year</th><th>Genre</th></tr>";
+      var x = xmlDoc.getElementsByTagName("game");
+      for (i = 0; i <10; i++) {
+        table += "<tr><td>" +
+        x[i].getElementsByTagName("description")[0].childNodes[0].nodeValue +
+        "</td><td>" +
+        x[i].getElementsByTagName("manufacturer")[0].childNodes[0].nodeValue +
+        "</td><td>" +
+        x[i].getElementsByTagName("year")[0].childNodes[0].nodeValue +
+        "</td><td>" +
+        x[i].getElementsByTagName("genre")[0].childNodes[0].nodeValue +
+        "</td></tr>";
+      }
+      document.getElementById("demo").innerHTML = table;
+    }
+    </script>
+
+
   <img src="stylesheets/images/background/images11.jpg " alt="Steam" width="800" height="320">
   <br>
   <button onclick = "myFunction1()">You should try here!</button>
